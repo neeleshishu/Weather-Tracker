@@ -1,0 +1,24 @@
+{{>header}}
+
+<form class="form">
+    <input id="text" type="text">
+    <input id="submit" type="submit">
+</form>
+
+<div class="main_layer" id="main_layer">
+    <p style="text-align:center ; font-family:'Tahoma, Verdana, sans-serif">Weather Report</p>
+    <hr>
+    <div class="top">
+        <p id="city_name" style="font-familt:Verdana, Geneva, Tahoma, sans-serif"></p>
+        <hr dotted>
+        <p id="time" style="color: cyan;"></p>
+        <hr>
+        </div>
+        <div class="bottom_layer">
+            <p class="temp"><span id="temp"></span><sup>o</sup>C</p>
+        </div>
+</div>
+
+<script src="js/main.js"></script>
+
+{{>footer}}
