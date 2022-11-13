@@ -12,7 +12,7 @@ const info = async(event)=>{
     }else{
         try{
         const api = await fetch(`
-        http://api.openweathermap.org/data/2.5/weather?q=${city_name}&units=metric&appid=adfda6a2845f8867e5b24016bb1abc02`);
+        http://api.openweathermap.org/data/2.5/weather?q=${city_name}&units=metric&appid={api_key}`);
         const data = await api.json();
         console.log(data);
         document.getElementById('city_name').innerText = city_name;
