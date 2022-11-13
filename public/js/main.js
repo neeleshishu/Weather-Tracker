@@ -12,12 +12,12 @@ const info = async(event)=>{
     }else{
         try{
         const api = await fetch(`
-        http://api.openweathermap.org/geo/1.0/direct?q=${city_name}&appid=adfda6a2845f8867e5b24016bb1abc02`);
+        http://api.openweathermap.org/data/2.5/weather?q=${city_name}&units=metric&appid=adfda6a2845f8867e5b24016bb1abc02`);
         const data = await api.json();
         console.log(data);
         document.getElementById('city_name').innerText = city_name;
-        document.getElementById('temp').innerText = data[0].lat;
-        document.getElementById('time').innerText = "Cloudy";
+        document.getElementById('temp').innerText = data.main.temp;
+        document.getElementById('time').innerText = data.weather[0].main;
         }catch{
             const main = document.querySelector('.main_layer');
         main.innerHTML = "please write a correct city name to get the temp";
